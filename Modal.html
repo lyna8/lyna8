@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn-show{
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            padding: 10px 35px;
+        }
+        .contianer{
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .contianer .modal{
+            color: white;
+            width: 700px;
+            background-color: black;
+            position:absolute;
+            top: 30px;
+            left: 50%;
+            transform: translate(-50,0);
+        }
+        .contiane .modal .modal-head{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+
+        }
+        .contiane .modal .modal-head button{
+            height: fit-content;
+            background-color: transparent;
+            color: white;
+            border: none;
+        }
+        .dis-none{
+            display: none;
+        }
+        .contianer .inside-modal{
+            width: 100%;
+            height: 100%;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <button class="btn-show">Show</button>
+    <div class="contianer" id="modal-contianer">
+        <div class="inside-modal">
+
+        </div>
+        <div class="modal">
+            <div class="modal-head">
+                <h1>Modal title</h1>
+                <button id="btn-close">X</button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer"></div>
+        </div>
+
+    </div>
+    <script src="Modal.js"></script>
+</body>
+</html>

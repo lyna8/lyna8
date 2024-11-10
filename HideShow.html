@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 300px;
+            background-color: black;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .displayNone{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+   <div class="box"></div>
+   <button class="hide"> Hide</button>
+   <button class="show">Show</button>
+   <button class="toggle">Toggle</button>
+   <script>
+    var hide = document.querySelector('.hide');
+    var show = document.querySelector('.show');
+    var toggle = document.querySelector('.toggle');
+    var box = document.querySelector('.box');
+    hide.addEventListener('click', function(){
+        box.classList.add('displayNone');
+    });
+    show.addEventListener('click',function(){
+        box.classList.remove('displayNone');
+    })
+    toggle.addEventListener('click',function(){
+        //console.log(box.classlist.contains(' displayNone'))
+        if(box.classList.contains('displayNone')){
+            box.classList.remove('displayNone');
+        }
+        else{
+            box.classList.add('displayNone');
+        }
+    })
+   </script>
+</body>
+</html>
